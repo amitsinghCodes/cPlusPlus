@@ -9,7 +9,7 @@ int main(){
     numb = {1, 2, 3, 4, 5};
     numb.push_back(8);
     for(int i = 0;i<numb.size();i++){
-        cout<<numb[i]<<endl;
+        cout<<i << " "<< numb[i]<<endl;
     }
     cout<<numb.front()<<endl; //1
     cout<<numb.back()<<endl;
