@@ -71,6 +71,9 @@ int main() {
     cout<<obj;
     myclass obj2 = obj;
     cout<<obj2;
+    myclass obj3;
+    obj3 = obj2;
+    cout <<"obj3"<<obj3;
 
     return 0;
 }
