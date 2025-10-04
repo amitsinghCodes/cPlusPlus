@@ -1,3 +1,5 @@
+//Make stack using two queues
+
 #include <iostream>
 #include <queue>
 using namespace std;
