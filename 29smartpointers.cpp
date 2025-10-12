@@ -90,6 +90,7 @@ int main(){
     tyre t;
 
     shared_ptr<int> p1(new int(20));
+    unique_ptr<int> o3 = make_unique<int>(10);
     shared_ptr<int>p2(p1);
     cout<<*p1<<endl;
     cout<<*p2<<endl;

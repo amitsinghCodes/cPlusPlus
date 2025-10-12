@@ -13,7 +13,7 @@ class singleton{
   singleton(const singleton& other) = delete;
   singleton& operator=(const singleton& other) = delete;
   singleton(const singleton&& other) = delete;
-  singleton& operator<<(const singleton&& other) = delete;
+  singleton& operator=(const singleton&& other) = delete;
   
   private:
   
