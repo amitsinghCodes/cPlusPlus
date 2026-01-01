@@ -43,16 +43,32 @@ class myclass{
          x = other.x;
         max = new int(*other.max);
         m = other.m;
+        other.m = ' ';
         int len = mylen(other.ch);
         ch = new char[len + 1];
         for(int i = 0 ;i<=len; ++i){
         ch[i] = other.ch[i];
     }
+    other.ch = nullptr;
     return *this;
     }
 
     myclass(myclass&& other){
-        
+        x = other.x;
+        other.x = 0;
+        max = new int(*other.max);
+        *other.max = 0;
+        m = other.m;
+        int len = mylen(other.ch);
+        ch = new char[len + 1];
+        for(int i = 0 ;i<=len; ++i){
+        ch[i] = other.ch[i];
+        }
+    }
+
+    ~myclass(){
+        delete max;
+        delete[] ch;
     }
     
     friend ostream& operator<<(ostream& out, myclass& obj);

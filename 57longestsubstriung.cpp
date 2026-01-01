@@ -5,7 +5,7 @@
 #include<vector>
 using namespace std;
 int longstring(string s){
-  vector<int>freq(256,0);//ascii 256
+  vector<int>freq(256,0);//ascii 256        or       map<char , int> freq;
   int best = 0; int left = 0; int beststart = 0, bestend = 0;
   for(int i =0;i < s.size(); i++){
   freq[s[i]]++;

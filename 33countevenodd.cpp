@@ -5,7 +5,7 @@ using namespace std;
 vector<vector<int>> oddevencount(int arr[]);
 
 int main(){
-    int numarr[7]  = {1,2,3,4,5,6,7};
+    int numarr[]  = {1,2,3,4,5,6,7};
  vector<int> v1;
     v1 = oddevencount(numarr);
 

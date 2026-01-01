@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+// A singleton can have only one inscatance and can provides a global 
+// point access to that insatnce.
 
 class singleton{
   public:

@@ -34,6 +34,5 @@ int main() {
     else
     cout<<"No "<<place<<endl;}
     
-            
     return 0;
 }

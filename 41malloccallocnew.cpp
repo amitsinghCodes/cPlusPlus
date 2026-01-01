@@ -12,7 +12,7 @@ if (arr_malloc == NULL) {
 }
 
 // Use the allocated memory
-for (int i = 0; i < num_elements; ++i) {
+for (int i = 0; i < num_elements; ++i) { 
     arr_malloc[i] = i * 10; // Values are initially uninitialized
 }
 

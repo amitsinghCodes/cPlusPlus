@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-
+// condition ? true : flase;
 using  namespace std;
 
 int main()

@@ -3,7 +3,7 @@
 #include<vector>
 
 using namespace std;
-
+// pointers are variables that stor address of other variables,, so that the valuess are easy to modify.
 int main(){
     string  food = "Pizza";
     string*  ptr = &food;  //ptr has the address of food

@@ -18,7 +18,7 @@ int main() {
     Human obj;
     try {
         obj.setAge(20);  // Exception will be thrown
-    } 
+    }
     catch (const char* msg) {
         cout << msg << endl;  // Exception is caught here
     }
