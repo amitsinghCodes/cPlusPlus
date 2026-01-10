@@ -18,7 +18,7 @@ public:
 };
 
 int main(){
-    Solution obj; 
+    Solution obj;
     int x = obj.reverse(-236);
     cout<<x;
     return 0;
