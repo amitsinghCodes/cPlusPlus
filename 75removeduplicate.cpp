@@ -1,6 +1,6 @@
 #include <iostream>
 #include<vector>
-using namespace std;;
+using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
@@ -18,7 +18,7 @@ public:
 int main() {
     Solution obj;
 
-    vector<int> nums = {0,0,1,1,1,2,2,3,3,4};
+    vector<int> nums = {0,0,1,1,1,2,2,3,3,4,7};
 
     int m = obj.removeDuplicates(nums);
 
