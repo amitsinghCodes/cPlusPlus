@@ -40,30 +40,44 @@ class myclass{
     }
     
     myclass& operator=(myclass& other){
-         x = other.x;
+        x = other.x;
         max = new int(*other.max);
         m = other.m;
-        other.m = ' ';
         int len = mylen(other.ch);
         ch = new char[len + 1];
         for(int i = 0 ;i<=len; ++i){
         ch[i] = other.ch[i];
     }
-    other.ch = nullptr;
     return *this;
     }
 
     myclass(myclass&& other){
         x = other.x;
         other.x = 0;
-        max = new int(*other.max);
-        *other.max = 0;
+        max = other.max;
+        other.max = nullptr;
         m = other.m;
-        int len = mylen(other.ch);
-        ch = new char[len + 1];
-        for(int i = 0 ;i<=len; ++i){
-        ch[i] = other.ch[i];
-        }
+        ch = other.ch;
+        other.ch = nullptr;
+    }
+
+    myclass& operator=(myclass&& other) noexcept {
+        if (this == &other) return *this;
+
+        delete max;
+        delete[] ch;
+
+        x = other.x;
+        max = other.max;
+        m = other.m;
+        ch = other.ch;
+
+        other.x = 0;
+        other.max = nullptr;
+        other.m = ' ';
+        other.ch = nullptr;
+
+        return *this;
     }
 
     ~myclass(){
