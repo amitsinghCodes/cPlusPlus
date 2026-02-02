@@ -14,7 +14,7 @@ vector<vector<string>> groupanagram(vector<string> strs){
     }
     vector<vector<string>> ans;
     
-    for(auto p : mp){
+    for(auto& p : mp){
         ans.push_back(move(p.second));
     }
     return ans;
