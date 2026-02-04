@@ -7,11 +7,11 @@ public:
     vector<vector<int>> mergeSimilarItems(vector<vector<int>>& items1, vector<vector<int>>& items2) {
         map<int,int> sum;
 
-        for(auto it : items1) {sum[it[0]] += it[1];}
-        for(auto it : items2) {sum[it[0]] += it[1];}
+        for(auto &it : items1) {sum[it[0]] += it[1];}
+        for(auto &it : items2) {sum[it[0]] += it[1];}
 
         vector<vector<int>> result;
-        for(auto p : sum){
+        for(auto &p : sum){
             result.push_back({p.first, p.second});
         }
         return result;

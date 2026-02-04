@@ -26,6 +26,5 @@ int main(){
         cout<<i.first<<" : "<<i.second<<endl;
     }
 
-
     return 0;
 }
