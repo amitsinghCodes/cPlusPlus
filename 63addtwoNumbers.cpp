@@ -10,7 +10,7 @@ public:
 
     // STATIC: add two numbers
     static ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode dummy(0);
+        ListNode dummy(0); 
         ListNode* current = &dummy;
         int carry = 0;
 

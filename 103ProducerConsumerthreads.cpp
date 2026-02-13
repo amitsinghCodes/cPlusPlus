@@ -59,6 +59,24 @@ void consumer() {
 
     for (int x : consumed) {
         if (seen.insert(x).second) {
+            /*
+            For set / unordered_set:
+insert(value)
+returns:
+pair<iterator, bool>
+• .first → iterator to element
+• .second → true if insertion succeeded
+• .second → false if element already existed
+So:
+seen.insert(x).second
+means:
+👉 “Was x NOT already present?”
+If true:
+first time seeing x
+insert into unique list
+If false:
+duplicate → skip
+            */
             unique.push_back(x);
         }
     }
