@@ -43,7 +43,7 @@ int main() {
 
     Solution obj;
 
-    string digits = "23";
+    string digits = "234";
 
     vector<string> result = obj.letterCombinations(digits);
 
