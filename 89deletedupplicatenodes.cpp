@@ -13,26 +13,30 @@ using namespace std;
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
-        ListNode dummy(0);
-        dummy.next = head;
-        ListNode* previous= &dummy;
-        ListNode* current = head;
-        while(current && current->next){
-            previous->next = current;
-            if(current->val == current->next->val){
-                int value = current->val;
-                while(current && value == current->val){
-                    current = current->next;
-                }
-                 previous->next = current;
+    ListNode dummy(0);
+    dummy.next = head;
+
+    ListNode* previous = &dummy;
+
+    while (head) {
+        // If duplicate sequence found
+        if (head->next && head->val == head->next->val) {
+            int value = head->val;
+
+            while (head && head->val == value) {
+                head = head->next;
             }
-            else{
-            previous = current;
-            current = current->next;
-            }
+
+            previous->next = head;   // skip duplicates
         }
-        return dummy.next;
+        else {
+            previous = head;
+            head = head->next;
+        }
     }
+
+    return dummy.next;
+}
 };
 
 ListNode* buildList(const vector<int>& a) {
