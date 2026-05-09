@@ -31,7 +31,7 @@ int main() {
         {10, 11, 16, 20},
         {23, 30, 34, 60}
     };
-
+    cout<<boolalpha;
     Solution sol;
 
     cout << sol.searchMatrix(matrix, 3) << endl;   // 1
